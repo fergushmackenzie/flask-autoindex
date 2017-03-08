@@ -148,7 +148,7 @@ class Entry(with_metaclass(_EntryMeta, object)):
             except AttributeError:
                 raise GuessError('There is no matched icon.')
         try:
-            return urljoin(url_for('.silkicon', filename=''), get_icon_url())
+            return get_icon_url()
         except (AttributeError, RuntimeError):
             return 'ERROR'
             return get_icon_url()
@@ -159,7 +159,7 @@ class File(Entry):
 
     EXTENSION = re.compile('\.([^.]+)$')
 
-    default_icon = 'page_white.png'
+    default_icon = '<i class="large file icon">'
     icon_map = []
 
     def __new__(cls, path, rootdir=None, autoindex=None):
@@ -206,7 +206,7 @@ class File(Entry):
 class Directory(Entry):
     """This class wraps a directory."""
 
-    default_icon = 'folder.png'
+    default_icon = '<i class="large folder icon"></i>'
     icon_map = []
 
     def __new__(cls, *args, **kwargs):
@@ -289,7 +289,7 @@ class Directory(Entry):
 class RootDirectory(Directory):
     """This class wraps a root directory."""
 
-    default_icon = 'server.png'
+    default_icon = '<i class="large server icon"></i>'
     icon_map = []
     _rootdirs = {}
 
@@ -317,7 +317,7 @@ class RootDirectory(Directory):
 class _ParentDirectory(Directory):
     """This class wraps a parent directory."""
 
-    default_icon = 'arrow_turn_up.png'
+    default_icon = '<i class="large level up icon"></i>'
     icon_map = []
 
     def __new__(cls, *args, **kwargs):

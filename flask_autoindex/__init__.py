@@ -15,7 +15,6 @@ import os
 import re
 
 from flask import *
-from flask_silk import Silk
 from jinja2 import FileSystemLoader, TemplateNotFound
 from werkzeug import cached_property
 
@@ -72,7 +71,7 @@ class AutoIndex(object):
             raise TypeError("'base' should be Flask or Blueprint.")
 
     def __init__(self, base, browse_root=None, add_url_rules=True,
-                 template_context=None, silk_options=None,
+                 template_context=None,
                  show_hidden=False):
         """Initializes an autoindex instance."""
         self.base = base
@@ -82,10 +81,6 @@ class AutoIndex(object):
             browse_root = os.path.curdir
         self.rootdir = RootDirectory(browse_root, autoindex=self)
         self.template_context = template_context
-        if silk_options is None:
-            silk_options = {}
-        silk_options['silk_path'] = silk_options.get('silk_path', '/__icons__')
-        self.silk = Silk(self.base, **silk_options)
         self.show_hidden = show_hidden
         self.icon_map = []
         self.converter_map = []

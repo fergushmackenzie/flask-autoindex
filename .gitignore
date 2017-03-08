@@ -1,6 +1,9 @@
 # Compiled sources
 *.pyc
 
+# virtual env
+python3/
+
 # Temporary files
 *.swp
 

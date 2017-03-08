@@ -5,61 +5,38 @@ from .entry import File, Default
 
 
 by_extension = [
-    ('page_white_python.png', 'py'),
-    ('python.png', 'pyc'),
-    ('page_white_text_width.png', ['md', 'markdown', 'rst', 'rtf']),
-    ('page_white_code.png', ['html', 'htm', 'cgi']),
-    ('page_white_visualstudio.png', ['asp', 'vb']),
-    ('page_white_ruby.png', 'rb'),
-    ('page_code.png', 'xhtml'),
-    ('page_white_code_red.png', ['xml', 'xsl', 'xslt', 'yml']),
-    ('script.png', ['js', 'json', 'applescript', 'htc']),
-    ('layout.png', ['css', 'less']),
-    ('page_white_php.png', 'php'),
-    ('page_white_c.png', 'c'),
-    ('page_white_cplusplus.png', 'cpp'),
-    ('page_white_h.png', 'h'),
-    ('database.png', ['db', 'sqlite', 'sqlite3']),
-    ('page_white_database.png', 'sql'),
-    ('page_white_gear.png', ['conf', 'cfg', 'ini', 'reg', 'sys']),
-    ('page_white_zip.png', ['zip', 'tar', 'gz', 'tgz', '7z', 'alz', 'rar', \
+    ('<i class="large file code outline icon"></i>', ['py', 'pyc', 'php', 'c', 'cpp', 'h']),
+    ('<i class="large file text icon">', ['md', 'markdown', 'rst', 'rtf']),
+    ('<i class="large html5 icon"></i>', ['html', 'htm', 'cgi']),
+    ('<i class="large file code outline icon"></i>', ['asp', 'vb']),
+    ('<i class="large file code outline icon"></i>', 'rb'),
+    ('<i class="large html5 icon"></i>', 'xhtml'),
+    ('<i class="large css3 icon"></i>', ['css', 'less']),
+    ('<i class="large database icon"></i>', ['db', 'sqlite', 'sqlite3', 'sql']),
+    ('<i class="large settings icon">', ['conf', 'cfg', 'ini', 'reg', 'sys']),
+    ('<i class="large file archive outline icon"></i>', ['zip', 'tar', 'gz', 'tgz', '7z', 'alz', 'rar', \
                             'bin', 'cab']),
-    ('cup.png', 'jar'),
-    ('page_white_cup.png', ['java', 'jsp']),
-    ('application_osx_terminal.png', 'sh'),
-    ('page_white_acrobat.png', 'pdf'),
-    ('package.png', ['pkg', 'dmg']),
-    ('shape_group.png', ['ai', 'svg', 'eps']),
-    ('application_osx.png', 'app'),
-    ('cursor.png', 'cur'),
-    ('feed.png', 'rss'),
-    ('cd.png', ['iso', 'vcd', 'toast']),
-    ('page_white_powerpoint.png', ['ppt', 'pptx']),
-    ('page_white_excel.png', ['xls', 'xlsx', 'csv']),
-    ('page_white_word.png', ['doc', 'docx']),
-    ('page_white_flash.png', 'swf'),
-    ('page_white_actionscript.png', ['fla', 'as']),
-    ('comment.png', 'smi'),
-    ('disk.png', ['bak', 'bup']),
-    ('application_xp_terminal.png', ['bat', 'com']),
-    ('application.png', 'exe'),
-    ('key.png', 'cer'),
-    ('cog.png', ['dll', 'so']),
-    ('pictures.png', 'ics'),
-    ('error.png', 'log'),
-    ('music.png', 'mpa'),
-    ('font.png', ['ttf', 'eot']),
-    ('vcard.png', 'vcf'),
-    ('page_white.png', Default)
+    ('<i class="large file archive outline icon"></i>', 'jar'),
+    ('<i class="large coffee icon"></i>', ['java', 'jsp']),
+    ('<i class="large terminal icon"></i>', 'sh'),
+    ('<i class="large file pdf outline icon"></i>', 'pdf'),
+    ('<i class="large rss icon"></i>', 'rss'),
+    ('<i class="large circle icon"></i>', ['iso', 'vcd', 'toast']),
+    ('<i class="large file powerpoint outline icon"></i>', ['ppt', 'pptx']),
+    ('<i class="large file excel outline icon"></i>', ['xls', 'xlsx', 'csv']),
+    ('<i class="large file word outline icon"></i>', ['doc', 'docx']),
+    ('<i class="large setting icon"></i>', ['bat', 'com']),
+    ('<i class="large image icon"></i>', 'ics'),
+    ('<i class="large file text icon"></i>', Default)
 ]
 by_filename = [
-    ('page_white_gear.png', ['Makefile', 'Rakefile'])
+    ('<i class="large file text icon"></i', ['Makefile', 'Rakefile'])
 ]
 by_mimetype = [
-    ('page_white_text.png', 'text/*'),
-    ('picture.png', 'image/*'),
-    ('music.png', 'audio/*'),
-    ('film.png', 'video/*')
+    ('<i class="large file text icon"></i>', 'text/*'),
+    ('<i class="large image icon"></i>', 'image/*'),
+    ('<i class="large file audio outline icon"></i>', 'audio/*'),
+    ('<i class="large file video outline icon"></i>', 'video/*')
 ]
 
 

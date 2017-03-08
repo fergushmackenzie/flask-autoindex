@@ -1,12 +1,12 @@
 {% macro entry(ent) %}
   <tr>
     {% set icon = ent.guess_icon() %}
-    <td class="icon">
+    <td class="one wide">
       {% if icon %}
-        <img src="{{ icon }}" />
+        {{ icon|safe }}
       {% endif %}
     </td>
-    <td class="name">
+    <td class="eight wide">
       <a href="{{ url_for(endpoint, path=ent.path) }}">
       {%- if ent.name == ".." -%}
         Parent folder
@@ -14,10 +14,10 @@
         {{ ent.name }}
       {%- endif -%}
     </a></td>
-    <td class="modified">
+    <td class="four wide">
       <time datetime="{{ ent.modified }}">{{ ent.modified }}</time>
     </td>
-    <td class="size">
+    <td class="three wide">
       {% if ent.size %}
         {{ ent.size|filesizeformat }}
       {% else %}
@@ -36,9 +36,9 @@
     {%- endif -%}
     {%- if sort_by == key -%}
       {%- if order > 0 -%}
-        <img src="{{ url_for('__autoindex__.static', filename='asc.gif') }}" alt="ASC" />
+        <i class="sort content ascending icon"></i>
       {%- elif order < 0 -%}
-        <img src="{{ url_for('__autoindex__.static', filename='desc.gif') }}" alt="DESC" />
+        <i class="sort content descending icon"></i>
       {%- endif -%}
     {%- endif -%}
   </th>
@@ -61,7 +61,7 @@
   <a href="{{ url_for(endpoint, path=ent.path) }}">
     {% set icon = ent.guess_icon() %}
     {% if icon %}
-      <img src="{{ icon }}" />
+      {{ icon|safe }}
     {% endif %}
     {% if not ent.is_root() %}
       {{ ent.name }}

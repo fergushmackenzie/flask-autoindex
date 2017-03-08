@@ -1,3 +1,5 @@
-Flask-AutoIndex
+Flask-AutoIndex-semantic-ui
 
-A mod_autoindex for Flask. Under development.
+A mod_autoindex for Flask using semantic ui. Forked from Flask-AutoIndex.
+
+Under development.
